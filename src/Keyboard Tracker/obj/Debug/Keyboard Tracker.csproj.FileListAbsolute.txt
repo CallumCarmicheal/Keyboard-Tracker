@@ -1,0 +1,10 @@
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\bin\Debug\Keyboard Tracker.exe.config
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\bin\Debug\Keyboard Tracker.exe
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\bin\Debug\Keyboard Tracker.pdb
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard Tracker.csprojResolveAssemblyReference.cache
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard_Tracker.GUI.resources
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Properties.Resources.resources
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard Tracker.csproj.GenerateResource.Cache
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard Tracker.exe
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard Tracker.pdb
+c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard_Tracker.View.resources

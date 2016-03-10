@@ -16,3 +16,8 @@ What ever you want
 
 # What can i do with the source
 What ever you want, Sell it but make sure you credit me somewhere even if its a little text print at 6pt.
+
+# Other not as Important Notes
+
+Visual Studio Version: 2015
+Video of this Project Creation: Will get the link when the livestream is done
