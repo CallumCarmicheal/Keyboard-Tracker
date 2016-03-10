@@ -27,20 +27,21 @@ namespace Keyboard_Tracker {
             TotalPresses.Text = string.Format("{0:n0}", Program.TotalKeysPressed);
         }
 
-        private int GetNum(Keys key) {
-            int amt = 0; try { amt = Program.PressedKeys[(int)key]; } 
-            catch { } return amt;
-        }
+        
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void Reset(object sender, EventArgs e) {
             Program.TotalKeysPressed = 0;
             Program.PressedKeys = new Dictionary<int, int>();
         }
 
         View view;
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void ShowKeysView(object sender, LinkLabelLinkClickedEventArgs e) {
             view = new View();
             view.Show();
+        }
+
+        private void ToggleAllowSpam(object sender, EventArgs e) {
+            Program.AllowSpamming = CBAllowKeyHolding.Checked;
         }
     }
 }

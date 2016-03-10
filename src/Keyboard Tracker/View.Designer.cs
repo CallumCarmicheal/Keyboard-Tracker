@@ -25,8 +25,8 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.KeysList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.header_Keys = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.header_Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.KeyUpdater = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -34,8 +34,8 @@
             // 
             this.KeysList.BackColor = System.Drawing.SystemColors.Control;
             this.KeysList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
+            this.header_Keys,
+            this.header_Amount});
             this.KeysList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KeysList.Location = new System.Drawing.Point(0, 0);
             this.KeysList.Name = "KeysList";
@@ -44,14 +44,15 @@
             this.KeysList.UseCompatibleStateImageBehavior = false;
             this.KeysList.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // header_Keys
             // 
-            this.columnHeader1.Text = "Key";
+            this.header_Keys.Text = "Key";
+            this.header_Keys.Width = 125;
             // 
-            // columnHeader2
+            // header_Amount
             // 
-            this.columnHeader2.Text = "Pressed Amount";
-            this.columnHeader2.Width = 200;
+            this.header_Amount.Text = "Pressed Amount";
+            this.header_Amount.Width = 200;
             // 
             // KeyUpdater
             // 
@@ -73,8 +74,8 @@
 
         #endregion
         private System.Windows.Forms.ListView KeysList;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader header_Keys;
+        private System.Windows.Forms.ColumnHeader header_Amount;
         private System.Windows.Forms.Timer KeyUpdater;
     }
 }

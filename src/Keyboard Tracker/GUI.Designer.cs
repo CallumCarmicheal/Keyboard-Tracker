@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.StartListeningBTN = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.CBAllowKeyHolding = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +82,7 @@
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "View keystrokes in Detail";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowKeysView);
             // 
             // button1
             // 
@@ -96,9 +97,9 @@
             // StartListeningBTN
             // 
             this.StartListeningBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartListeningBTN.Location = new System.Drawing.Point(144, 103);
+            this.StartListeningBTN.Location = new System.Drawing.Point(259, 103);
             this.StartListeningBTN.Name = "StartListeningBTN";
-            this.StartListeningBTN.Size = new System.Drawing.Size(124, 23);
+            this.StartListeningBTN.Size = new System.Drawing.Size(54, 23);
             this.StartListeningBTN.TabIndex = 5;
             this.StartListeningBTN.Text = "Start";
             this.StartListeningBTN.UseVisualStyleBackColor = true;
@@ -107,19 +108,31 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(274, 103);
+            this.button2.Location = new System.Drawing.Point(319, 103);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
+            this.button2.Size = new System.Drawing.Size(50, 23);
             this.button2.TabIndex = 14;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Reset);
+            // 
+            // CBAllowKeyHolding
+            // 
+            this.CBAllowKeyHolding.AutoSize = true;
+            this.CBAllowKeyHolding.Location = new System.Drawing.Point(144, 107);
+            this.CBAllowKeyHolding.Name = "CBAllowKeyHolding";
+            this.CBAllowKeyHolding.Size = new System.Drawing.Size(111, 17);
+            this.CBAllowKeyHolding.TabIndex = 15;
+            this.CBAllowKeyHolding.Text = "Allow Key Holding";
+            this.CBAllowKeyHolding.UseVisualStyleBackColor = true;
+            this.CBAllowKeyHolding.CheckedChanged += new System.EventHandler(this.ToggleAllowSpam);
             // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 137);
+            this.Controls.Add(this.CBAllowKeyHolding);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.StartListeningBTN);
             this.Controls.Add(this.button1);
@@ -145,6 +158,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button StartListeningBTN;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox CBAllowKeyHolding;
     }
 }
 

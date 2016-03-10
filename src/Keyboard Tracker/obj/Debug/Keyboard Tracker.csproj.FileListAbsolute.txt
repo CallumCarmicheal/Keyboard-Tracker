@@ -8,3 +8,6 @@ c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracke
 c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard Tracker.exe
 c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard Tracker.pdb
 c:\users\callum carmicheal\documents\visual studio 2015\Projects\Keyboard Tracker\Keyboard Tracker\obj\Debug\Keyboard_Tracker.View.resources
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\bin\Debug\Keyboard Tracker.exe.config
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard Tracker.exe
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard Tracker.pdb

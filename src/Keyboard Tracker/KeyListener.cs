@@ -15,6 +15,7 @@ namespace Keyboard_Tracker {
 
         public const int WH_KEYBOARD_LL = 13;
         public const int WM_KEYDOWN = 0x0100;
+        public const int WM_KEYUP = 0x0101;
         public const int SW_HIDE = 0;
         public static IntPtr _hookID = IntPtr.Zero;
         public static LowLevelKeyboardProc _proc = HookCallback;
@@ -41,8 +42,9 @@ namespace Keyboard_Tracker {
         public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
         public static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam) {
+            IntPtr KeyState = (Program.AllowSpamming ? (IntPtr)WM_KEYDOWN : (IntPtr)WM_KEYUP);
             bool ListenForKeys = Program.ListenForKeys;
-            bool KeyDown = (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN);
+            bool KeyDown = (nCode >= 0 && wParam == KeyState);
 
             if (ListenForKeys && KeyDown) {
                 int vkCode = Marshal.ReadInt32(lParam);
