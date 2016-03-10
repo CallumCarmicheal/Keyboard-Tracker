@@ -1,4 +1,4 @@
-﻿namespace Keyboard_Tracker {
+﻿namespace Keyboard_Tracker.Forms {
     partial class View {
         /// <summary>
         /// Required designer variable.
@@ -25,8 +25,10 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.KeysList = new System.Windows.Forms.ListView();
+            this.header_Session = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.header_Keys = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.header_Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.header_SID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.KeyUpdater = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -34,8 +36,10 @@
             // 
             this.KeysList.BackColor = System.Drawing.SystemColors.Control;
             this.KeysList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.header_Session,
             this.header_Keys,
-            this.header_Amount});
+            this.header_Amount,
+            this.header_SID});
             this.KeysList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KeysList.Location = new System.Drawing.Point(0, 0);
             this.KeysList.Name = "KeysList";
@@ -44,15 +48,29 @@
             this.KeysList.UseCompatibleStateImageBehavior = false;
             this.KeysList.View = System.Windows.Forms.View.Details;
             // 
+            // header_Session
+            // 
+            this.header_Session.DisplayIndex = 1;
+            this.header_Session.Text = "Session ID";
+            this.header_Session.Width = 73;
+            // 
             // header_Keys
             // 
+            this.header_Keys.DisplayIndex = 2;
             this.header_Keys.Text = "Key";
-            this.header_Keys.Width = 125;
+            this.header_Keys.Width = 144;
             // 
             // header_Amount
             // 
+            this.header_Amount.DisplayIndex = 3;
             this.header_Amount.Text = "Pressed Amount";
-            this.header_Amount.Width = 200;
+            this.header_Amount.Width = 278;
+            // 
+            // header_SID
+            // 
+            this.header_SID.DisplayIndex = 0;
+            this.header_SID.Text = "Name";
+            this.header_SID.Width = 125;
             // 
             // KeyUpdater
             // 
@@ -77,5 +95,7 @@
         private System.Windows.Forms.ColumnHeader header_Keys;
         private System.Windows.Forms.ColumnHeader header_Amount;
         private System.Windows.Forms.Timer KeyUpdater;
+        private System.Windows.Forms.ColumnHeader header_Session;
+        private System.Windows.Forms.ColumnHeader header_SID;
     }
 }

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Keyboard_Tracker {
+namespace Keyboard_Tracker.Forms {
     public partial class View : Form {
         public View() {
             InitializeComponent();
@@ -26,13 +26,18 @@ namespace Keyboard_Tracker {
             KeysList.BeginUpdate(); { 
                 KeysList.Items.Clear();
 
-                foreach (var key in Program.PressedKeys) {
-                    string PressedKey = ((Keys)key.Key).ToString();
+                foreach(var seshObj in Engine.KeyTracker.KeySessions) {
+                    var session = seshObj.Value;
+                    foreach (var key in session.Keys) {
+                        string PressedKey = ((Keys)key.Key).ToString();
 
-                    ListViewItem item = new ListViewItem(PressedKey);
-                    item.SubItems.Add(key.Value + "");
+                        ListViewItem item = new ListViewItem(session.Name);
+                        item.SubItems.Add(session.ID + ""); 
+                        item.SubItems.Add(PressedKey + "");
+                        item.SubItems.Add(string.Format("{0:n0}", key.Value.Amount));
 
-                    KeysList.Items.Add(item);
+                        KeysList.Items.Add(item);
+                    }
                 }
 
                 KeysList.Sort();
