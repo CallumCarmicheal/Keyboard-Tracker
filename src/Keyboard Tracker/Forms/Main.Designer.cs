@@ -34,9 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TBCSessionName = new System.Windows.Forms.MaskedTextBox();
             this.ToggleTrackingBTN = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.ToggleOptionsForm = new System.Windows.Forms.Button();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -121,25 +121,16 @@
             this.TBCSessionName.Text = "Current Session";
             this.TBCSessionName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // ToggleTrackingBTN
             // 
             this.ToggleTrackingBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ToggleTrackingBTN.Location = new System.Drawing.Point(28, 91);
-            this.ToggleTrackingBTN.Name = "button1";
+            this.ToggleTrackingBTN.Name = "ToggleTrackingBTN";
             this.ToggleTrackingBTN.Size = new System.Drawing.Size(129, 23);
             this.ToggleTrackingBTN.TabIndex = 34;
             this.ToggleTrackingBTN.Text = "Start tracking Keyboard";
             this.ToggleTrackingBTN.UseVisualStyleBackColor = true;
             this.ToggleTrackingBTN.Click += new System.EventHandler(this.ToggleKeyboardTracking);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 13);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Created by CallumC (On LiveCoding.tv)";
             // 
             // linkLabel1
             // 
@@ -150,26 +141,38 @@
             this.linkLabel1.TabIndex = 36;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Im open-source, Click me to goto GitHub";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenToGithub);
             // 
-            // button2
+            // ToggleOptionsForm
             // 
             this.ToggleOptionsForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ToggleOptionsForm.Location = new System.Drawing.Point(163, 91);
-            this.ToggleOptionsForm.Name = "button2";
+            this.ToggleOptionsForm.Name = "ToggleOptionsForm";
             this.ToggleOptionsForm.Size = new System.Drawing.Size(100, 23);
             this.ToggleOptionsForm.TabIndex = 37;
             this.ToggleOptionsForm.Text = "Show options";
             this.ToggleOptionsForm.UseVisualStyleBackColor = true;
             this.ToggleOptionsForm.Click += new System.EventHandler(this.button2_Click);
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(25, 125);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(190, 13);
+            this.linkLabel2.TabIndex = 38;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Created by CallumC (On LiveCoding.tv)";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 147);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.ToggleOptionsForm);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.ToggleTrackingBTN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TBCSessionName);
@@ -199,9 +202,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox TBCSessionName;
         private System.Windows.Forms.Button ToggleTrackingBTN;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button ToggleOptionsForm;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 

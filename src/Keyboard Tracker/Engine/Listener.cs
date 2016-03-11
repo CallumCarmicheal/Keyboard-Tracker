@@ -43,6 +43,7 @@ namespace Keyboard_Tracker.Engine {
 
         public static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam) {
             IntPtr KeyState = (KeyTracker.AllowSpamming ? (IntPtr)WM_KEYDOWN : (IntPtr)WM_KEYUP);
+
             bool ListenForKeys = KeyTracker.ListenForKeys;
             bool KeyDown = (nCode >= 0 && wParam == KeyState);
 

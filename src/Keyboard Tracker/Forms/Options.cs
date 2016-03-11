@@ -14,6 +14,8 @@ namespace Keyboard_Tracker.Forms {
 
         public Options() {
             InitializeComponent();
+
+            CBAllowKeyHolding.Checked = Engine.KeyTracker.AllowSpamming;
         }
 
         AddNewSession ans;
@@ -83,10 +85,8 @@ namespace Keyboard_Tracker.Forms {
 
         private void ClearTotalKeysPressed(object sender, LinkLabelLinkClickedEventArgs e) {
             if(AreYouSure("Do you want to clear the GLOBAL total presses while your at it Sir?")) {
-                ClearTotalKeysPressed(null, null);
+                Engine.KeyTracker.TotalKeysPressed = 0;
             }
-
-            Engine.KeyTracker.TotalKeysPressed = 0;
         }
 
         View view;

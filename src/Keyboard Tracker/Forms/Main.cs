@@ -67,5 +67,13 @@ namespace Keyboard_Tracker.Forms {
             frmOptions = new Options();
             frmOptions.Show();
         }
+
+        private void OpenToGithub(object sender, LinkLabelLinkClickedEventArgs e) {
+            System.Diagnostics.Process.Start("https://github.com/CallumCarmicheal/Keyboard-Tracker");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            System.Diagnostics.Process.Start("callumcarmicheal.com");
+        }
     }
 }
