@@ -2,11 +2,11 @@
 Stuff that is planned and may be done.
 
 ### Status Key
-FIN - Well this means the task is finished/added. i think?
-INP - In progress, will be finished soon (HOPEFULLY).
-TBC - To be Started/Confirmed.
-GVN - Given up on, Wont be added until time has freed up for selected feature.
-NID - No idea how to be done
+- FIN - Well this means the task is finished/added. i think?
+- INP - In progress, will be finished soon (HOPEFULLY).
+- TBC - To be Started/Confirmed.
+- GVN - Given up on, Wont be added until time has freed up for selected feature.
+- NID - No idea how to be done
 
 ## Planned
 # Graphical User Interface
