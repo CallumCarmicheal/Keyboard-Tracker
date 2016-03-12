@@ -24,20 +24,10 @@ namespace Keyboard_Tracker.Engine {
         public static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool UnhookWindowsHookEx(IntPtr hhk);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode, IntPtr wParam, IntPtr lParam);
 
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr GetModuleHandle(string lpModuleName);
-
-        [DllImport("kernel32.dll")]
-        public static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
@@ -47,14 +37,52 @@ namespace Keyboard_Tracker.Engine {
             bool ListenForKeys = KeyTracker.ListenForKeys;
             bool KeyDown = (nCode >= 0 && wParam == KeyState);
 
+            // Log some stuff for debugging
+            if(System.Diagnostics.Debugger.IsAttached) {
+                System.Diagnostics.Debugger.Log(0, 
+                    "KeyTracker - Engine", 
+                    "HookCallback(" + nCode + ", " + wParam + ", " + ((Keys)(Marshal.ReadInt32(lParam))).ToString() + ");" + 
+                    Environment.NewLine);
+            }
+
             if (ListenForKeys && KeyDown) {
-                try {
-                    // Increment our global Total key presses
-                    KeyTracker.TotalKeysPressed++;
+                // Increment our global Total key presses
+                KeyTracker.TotalKeysPressed++;
 
-                    // Make sure our key has not changed since the key press started
-                    int sessionID = KeyTracker.SessionID;
+                // Make sure our key has not changed since the key press started
+                int sessionID = KeyTracker.SessionID;
 
+                /* Session Checking and Creation */ {
+                    // Create our Session if it does not exist
+                    if (!KeyTracker.KeySessions.Keys.Contains(sessionID)) {
+                        // Create our session 
+                        KeySession session = new KeySession() {
+                            // Session Identifiers
+                            ID = sessionID,
+                            Name = KeyTracker.NextSessionName,
+
+                            // Keys
+                            TotalPressed = 0,
+                            Keys = new Dictionary<int, PressedKey>(),
+
+                            // Application Tracking
+                            UseApplicationTracking = false,
+                            ApplicationToTrack = IntPtr.Zero,
+                        }; KeyTracker.KeySessions.Add(sessionID, session);
+
+                        KeyTracker.TotalSessions++;
+                    }
+                }
+
+                /* Check if session is application specific */ {
+                    bool useAppTracking = KeyTracker.KeySessions[sessionID].UseApplicationTracking;
+                    if (useAppTracking) {
+                        // Welp this does not pass the PID... Good Job ME ;-;
+                        // TODO :: SOMETIME
+                    }
+                }
+
+                /* Adding key to current session */ {
                     // Our pressed Key
                     int vkCode = Marshal.ReadInt32(lParam);
 
@@ -62,18 +90,6 @@ namespace Keyboard_Tracker.Engine {
                     PressedKey pk = new PressedKey();
                     pk.Session = sessionID;
                     pk.Amount = 0;
-
-                    // Create our Session if it does not exist
-                    if (!KeyTracker.KeySessions.Keys.Contains(sessionID)) {
-                        // Create our session 
-                        KeySession session = new KeySession();
-                        session.ID = sessionID;
-                        session.TotalPressed = 0;
-                        session.Name = KeyTracker.NextSessionName;
-                        session.Keys = new Dictionary<int, PressedKey>();
-                        KeyTracker.KeySessions.Add(sessionID, session);
-                        KeyTracker.TotalSessions++;
-                    }
 
                     // Check if our key already exists
                     if (KeyTracker.KeySessions[sessionID].Keys.Keys.Contains(vkCode)) {
@@ -90,23 +106,8 @@ namespace Keyboard_Tracker.Engine {
 
                     // Set our Key
                     KeyTracker.KeySessions[sessionID].Keys[vkCode] = pk;
-                } catch(Exception ex) {
-                    // Display our exception in the debugger if connected
-                    if(System.Diagnostics.Debugger.IsAttached) {
-                        string output = "";
-
-                        // Set our leftmost output to time
-                        output += System.DateTime.Now.ToString("[dd-MM-yy HH:mm:ss] ");
-
-                        // Add our Exception
-                        output += ex.ToString();
-                    }
-
-                    // Exceptions not getting thrown
-                    //throw ex;
                 }
-                
-            } // */
+            }
 
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         } 

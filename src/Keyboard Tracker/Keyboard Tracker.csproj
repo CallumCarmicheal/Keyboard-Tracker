@@ -70,11 +70,11 @@
     <Compile Include="Forms\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SwapSessions.cs">
+    <Compile Include="Forms\SessionManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SwapSessions.Designer.cs">
-      <DependentUpon>SwapSessions.cs</DependentUpon>
+    <Compile Include="Forms\SessionManager.Designer.cs">
+      <DependentUpon>SessionManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,8 +93,8 @@
     <EmbeddedResource Include="Forms\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SwapSessions.resx">
-      <DependentUpon>SwapSessions.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SessionManager.resx">
+      <DependentUpon>SessionManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

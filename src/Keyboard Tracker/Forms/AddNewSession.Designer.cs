@@ -90,6 +90,7 @@
             this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Session Scope: ";
+            this.label5.Visible = false;
             // 
             // NewSessionScope
             // 
@@ -103,6 +104,7 @@
             this.MainHelpPopup.SetShowHelp(this.NewSessionScope, true);
             this.NewSessionScope.Size = new System.Drawing.Size(250, 21);
             this.NewSessionScope.TabIndex = 1;
+            this.NewSessionScope.Visible = false;
             // 
             // button1
             // 

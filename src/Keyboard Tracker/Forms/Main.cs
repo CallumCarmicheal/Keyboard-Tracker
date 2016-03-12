@@ -73,7 +73,15 @@ namespace Keyboard_Tracker.Forms {
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            System.Diagnostics.Process.Start("callumcarmicheal.com");
+            System.Diagnostics.Process.Start("http://callumcarmicheal.com");
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e) {
+            Engine.KeyTracker.ListenForKeys = false;
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e) {
+            Environment.Exit(0);
         }
     }
 }

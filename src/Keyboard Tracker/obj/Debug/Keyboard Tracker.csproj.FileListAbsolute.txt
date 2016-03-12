@@ -20,4 +20,4 @@ G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\bin\Debug\Keyboard Tracker.pdb
 G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.Main.resources
 G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.AddNewSession.resources
 G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.Options.resources
-G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.SwapSessions.resources
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.SessionManager.resources

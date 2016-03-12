@@ -37,7 +37,7 @@ namespace Keyboard_Tracker.Forms {
 
             // Set our session id to the Next available one
             Engine.KeyTracker.SessionID = Engine.KeyTracker.TotalSessions + 1;
-
+            
             DialogResult = DialogResult.OK;
         }
     }

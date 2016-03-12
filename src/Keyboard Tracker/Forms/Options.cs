@@ -71,9 +71,9 @@ namespace Keyboard_Tracker.Forms {
             Engine.KeyTracker.ListenForKeys = LoggingStatus;
         }
 
-        SwapSessions swapSessions;
+        SessionManager swapSessions;
         private void SwapToAnotherSession(object sender, EventArgs e) {
-            swapSessions = new SwapSessions();
+            swapSessions = new SessionManager();
             swapSessions.Show();
         }
 

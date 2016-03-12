@@ -51,7 +51,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 23);
             this.button4.TabIndex = 31;
-            this.button4.Text = "Swap to another session";
+            this.button4.Text = "Session Manager";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.SwapToAnotherSession);
             // 
