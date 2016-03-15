@@ -1,0 +1,13 @@
+Saving
+===========
+	1-3 Tries 	- Failed
+	4th Try 	- Success
+
+Loading
+==========
+	1-2 Tries 	- Failed
+		Failed because there was no calls to the loading function.
+	3 Tries 	- Failed
+		Trying to save the file?
+	4-5 Tries 	- Failed
+	6th Try 	- Success

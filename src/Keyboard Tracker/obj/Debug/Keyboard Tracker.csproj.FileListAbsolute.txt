@@ -21,3 +21,7 @@ G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms
 G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.AddNewSession.resources
 G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.Options.resources
 G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.SessionManager.resources
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\bin\Debug\Newtonsoft.Json.dll
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\bin\Debug\Newtonsoft.Json.pdb
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\bin\Debug\Newtonsoft.Json.xml
+G:\GitHub\Keyboard-Tracker\src\Keyboard Tracker\obj\Debug\Keyboard_Tracker.Forms.Save.resources

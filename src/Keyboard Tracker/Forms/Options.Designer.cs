@@ -26,7 +26,6 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.SaveCurrentSessionsBTN = new System.Windows.Forms.Button();
             this.CBAllowKeyHolding = new System.Windows.Forms.CheckBox();
             this.CreateNewSessionBTN = new System.Windows.Forms.Button();
             this.SaveAllSessionsBTN = new System.Windows.Forms.Button();
@@ -36,7 +35,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(8, 119);
+            this.linkLabel2.Location = new System.Drawing.Point(8, 90);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(125, 13);
             this.linkLabel2.TabIndex = 32;
@@ -47,7 +46,7 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(146, 70);
+            this.button4.Location = new System.Drawing.Point(146, 41);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 23);
             this.button4.TabIndex = 31;
@@ -58,29 +57,18 @@
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(11, 70);
+            this.button5.Location = new System.Drawing.Point(12, 41);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(129, 23);
+            this.button5.Size = new System.Drawing.Size(128, 23);
             this.button5.TabIndex = 30;
             this.button5.Text = "Clear all sessions";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.ClearAllSessions);
             // 
-            // SaveCurrentSessionsBTN
-            // 
-            this.SaveCurrentSessionsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveCurrentSessionsBTN.Location = new System.Drawing.Point(146, 41);
-            this.SaveCurrentSessionsBTN.Name = "SaveCurrentSessionsBTN";
-            this.SaveCurrentSessionsBTN.Size = new System.Drawing.Size(133, 23);
-            this.SaveCurrentSessionsBTN.TabIndex = 29;
-            this.SaveCurrentSessionsBTN.Text = "Save current Session";
-            this.SaveCurrentSessionsBTN.UseVisualStyleBackColor = true;
-            this.SaveCurrentSessionsBTN.Click += new System.EventHandler(this.SaveCurrentSession);
-            // 
             // CBAllowKeyHolding
             // 
             this.CBAllowKeyHolding.AutoSize = true;
-            this.CBAllowKeyHolding.Location = new System.Drawing.Point(53, 99);
+            this.CBAllowKeyHolding.Location = new System.Drawing.Point(53, 70);
             this.CBAllowKeyHolding.Name = "CBAllowKeyHolding";
             this.CBAllowKeyHolding.Size = new System.Drawing.Size(186, 17);
             this.CBAllowKeyHolding.TabIndex = 28;
@@ -93,7 +81,7 @@
             this.CreateNewSessionBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateNewSessionBTN.Location = new System.Drawing.Point(12, 12);
             this.CreateNewSessionBTN.Name = "CreateNewSessionBTN";
-            this.CreateNewSessionBTN.Size = new System.Drawing.Size(267, 23);
+            this.CreateNewSessionBTN.Size = new System.Drawing.Size(128, 23);
             this.CreateNewSessionBTN.TabIndex = 27;
             this.CreateNewSessionBTN.Text = "Create new Session";
             this.CreateNewSessionBTN.UseVisualStyleBackColor = true;
@@ -102,9 +90,9 @@
             // SaveAllSessionsBTN
             // 
             this.SaveAllSessionsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAllSessionsBTN.Location = new System.Drawing.Point(11, 41);
+            this.SaveAllSessionsBTN.Location = new System.Drawing.Point(146, 12);
             this.SaveAllSessionsBTN.Name = "SaveAllSessionsBTN";
-            this.SaveAllSessionsBTN.Size = new System.Drawing.Size(129, 23);
+            this.SaveAllSessionsBTN.Size = new System.Drawing.Size(133, 23);
             this.SaveAllSessionsBTN.TabIndex = 25;
             this.SaveAllSessionsBTN.Text = "Save all Sessions";
             this.SaveAllSessionsBTN.UseVisualStyleBackColor = true;
@@ -113,7 +101,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(148, 119);
+            this.linkLabel1.Location = new System.Drawing.Point(148, 90);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(131, 13);
             this.linkLabel1.TabIndex = 24;
@@ -125,11 +113,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 140);
+            this.ClientSize = new System.Drawing.Size(289, 113);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.SaveCurrentSessionsBTN);
             this.Controls.Add(this.CBAllowKeyHolding);
             this.Controls.Add(this.CreateNewSessionBTN);
             this.Controls.Add(this.SaveAllSessionsBTN);
@@ -149,7 +136,6 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button SaveCurrentSessionsBTN;
         private System.Windows.Forms.CheckBox CBAllowKeyHolding;
         private System.Windows.Forms.Button CreateNewSessionBTN;
         private System.Windows.Forms.Button SaveAllSessionsBTN;

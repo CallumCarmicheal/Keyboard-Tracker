@@ -16,7 +16,7 @@ NID - No idea how to be done
 | TBC | | Create a better Graphical User interface |
 | TBC | | Fix flickering on Live Preview |
 | FIN | 495d157cb8f8340d28831ed3c07dbd0d1b29decb | Add a session changer |
-| FIN | | Create a session manager |
+| FIN | 4eecbdcb182a9b2e52e95ffee6e3a1bd6186c68c | Create a session manager |
 
 # Key Tracker - Engine
 | Status | Git Commit |TODO ITEM |

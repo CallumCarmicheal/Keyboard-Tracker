@@ -85,5 +85,26 @@ namespace Keyboard_Tracker.Forms {
                 RefreshSessions(null, null);
             }
         }
+
+
+        private void button5_Click(object sender, EventArgs e) {
+            MessageBox.Show("Open?");
+            openFileDialog1.DefaultExt = ".ktBinary";
+            DialogResult dr = openFileDialog1.ShowDialog();
+
+            if (dr == DialogResult.OK) {
+                // Set file path
+                string filePath = openFileDialog1.FileName;
+
+
+                Engine.Loading.LoadSessions(filePath);
+            }
+        }
+
+        Save sv;
+        private void button6_Click(object sender, EventArgs e) {
+            sv = new Save();
+            sv.Show();
+        }
     }
 }

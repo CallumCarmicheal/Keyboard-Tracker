@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Keyboard_Tracker.Engine {
+    [Serializable]
     struct PressedKey {
         // The owner's session
         public int Session; // NOT NEEDED, LEFT IN CASE OF USAGED NEEDED LATER
@@ -13,6 +14,7 @@ namespace Keyboard_Tracker.Engine {
         public int Amount;
     }
 
+    [Serializable]
     struct KeySession {
         // Session Identifer(s)
         public int ID;

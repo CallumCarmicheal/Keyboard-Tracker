@@ -36,8 +36,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dep\JSON.Net\Bin\Net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine\KeyTracker.cs" />
+    <Compile Include="Engine\Loading.cs" />
+    <Compile Include="Engine\Saving.cs" />
     <Compile Include="Engine\Structs.cs" />
     <Compile Include="Forms\AddNewSession.cs">
       <SubType>Form</SubType>
@@ -69,6 +77,12 @@
     </Compile>
     <Compile Include="Forms\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Save.Designer.cs">
+      <DependentUpon>Save.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SessionManager.cs">
       <SubType>Form</SubType>
@@ -92,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Save.resx">
+      <DependentUpon>Save.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SessionManager.resx">
       <DependentUpon>SessionManager.cs</DependentUpon>

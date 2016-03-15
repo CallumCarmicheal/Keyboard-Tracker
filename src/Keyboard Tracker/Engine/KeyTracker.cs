@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Keyboard_Tracker.Engine {
+    [Serializable]
     class KeyTracker {
         // Swap between keyDown and keyUp
         public static bool AllowSpamming = false;
@@ -34,7 +36,7 @@ namespace Keyboard_Tracker.Engine {
                 return default(KeySession);
             return KeySessions[ID];
         }
-
+        
         public static void setKeySessionByID(KeySession session, int ID) {
             lock (KeySessions) {
                 KeySessions[ID] = session;
